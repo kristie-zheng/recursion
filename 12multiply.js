@@ -2,13 +2,13 @@
 // Math methods.
 var total = 0;
 var multiply = function(x, y) {
-    if (y < 1) {
-        return total + (x*y);
-    }
-    else {
-        total += x;
-        return multiply(x, y-1);
-    }
+  if (y < 1) {
+    return total + (x*y);
+  }
+  else {
+    total += x;
+    return multiply(x, y-1);
+  }
 };
 
 console.log(multiply(75.5, 2.5));
