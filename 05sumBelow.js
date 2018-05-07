@@ -3,14 +3,15 @@
 // sumBelow(7); // 21
 var total = 0;
 var sumBelow = function(n) {
-  if (n > 0) {
-    total += n;
-    sumBelow(n-1);
+  if (n === 0) {
+    return 0;
   }
-  return total;
+  else if (n > 0) {
+    return n + sumBelow(n-1);
+  }
 };
 
-console.log(sumBelow(4))
+console.log(sumBelow(10))
 //input: an integer
 //output: an integer representing sum btween 1-n
 //edge cases: negative ints
