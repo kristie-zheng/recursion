@@ -2,8 +2,8 @@
 // Math methods.
 var total = 0;
 var multiply = function(x, y) {
-  if (y === 0) {
-    return total;
+  if (y < 1) {
+    return total + (x*y);
   }
   else {
     total += x;
@@ -11,13 +11,13 @@ var multiply = function(x, y) {
   }
 };
 
-console.log(multiply(100,2))
+console.log(multiply(75.5, 2.5));
 
-//input: two ints
-//output: one int
+//input: two numbers (ints and flaots)
+//output: one value representing x multiplied by y
 //edge: none
 //constraints: none
 
 //add x to x
 //decrement y
-//if y = 0 return 
+//if y <1 return total + the "remainder", which is x*current decimal value of y
