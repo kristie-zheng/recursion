@@ -16,14 +16,14 @@ decrement exponent
 return total
 */
 
-var total = 1;
+
 var exponent = function(base, exp) {
   if (exp === 0) {
-    return total;
+    return 1;
   }
   else {
-    total *= base;
-    return exponent(base, exp-1);
+    
+    return base * exponent(base, exp-1);
   }
 }
 
