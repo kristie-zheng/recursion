@@ -15,6 +15,7 @@ if (n===2) return true
 else return false
 */
 
+// 2^0 = 1
 // 2^1 = 2
 // 2^2 = 4
 // 2^3 = 8
@@ -25,7 +26,7 @@ var powerOfTwo = function(n) {
     if (n === 2 || n === 1) {
         return true;
     }
-    else if (n < 2) {
+    else if (n < 1) {
         return false;
     }
     else {
@@ -33,4 +34,4 @@ var powerOfTwo = function(n) {
     }
 
 };
-console.log(powerOfTwo(32))
+console.log(powerOfTwo(64))
