@@ -1,19 +1,19 @@
 
 // 2. Compute the sum of an array of integers.
 // sum([1,2,3,4,5,6]); // 21
-var total = 0;
 var sum = function(array) {
-    if (array.length === 0) {
-        return total;
+    if (array.length === 1) {
+        
+        return array[0];
     }
     else {
-        total += array[0];
+        var firstElement = array[0];
         array = array.slice(1, array.length);
-        return sum(array);
+        return firstElement + sum(array);
     }
 };
 
-console.log(sum([1,2,3,4,5,6]));
+console.log(sum([2, 3, 4]));
 
 //input: an array of integers
 //output: single integer representing sum of the array's elements
