@@ -1,17 +1,17 @@
-// 5. Sum all integers below a given integer.
+// 5. Sum all integers below a given integer NOT INCLUSIVE OF THAT INTEGER.
 // sumBelow(10); // 45
 // sumBelow(7); // 21
-var total = 0;
 var sumBelow = function(n) {
-  if (n === 0) {
+  if (n === 1) {
     return 0;
   }
-  else if (n > 0) {
-    return n + sumBelow(n-1);
+  else {
+    return n-1 + sumBelow(n-1);
   }
 };
 
-console.log(sumBelow(10))
+
+console.log(sumBelow(6))
 //input: an integer
 //output: an integer representing sum btween 1-n
 //edge cases: negative ints
