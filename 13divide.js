@@ -1,19 +1,17 @@
 // 13. Write a function that divides two numbers without using the / operator or
 // Math methods.
-var numberDivisions = 0;
+
 var divide = function(x, y) {
-    if (x < y) {
-        var remainderAmt = x/y;
-        return numberDivisions + remainderAmt;
+    var numberOfDivisions= 1;
+    if (x === y) {
+        return numberOfDivisions;
     }
     else {
-        x = x - y;
-        numberDivisions++;
-        return divide(x, y);
+        return numberOfDivisions + divide(x-y, y);
     }
 };
 
-console.log(divide(22, 7));
+console.log(divide(64, 4));
 
 //input: two numbers (floats or integers)
 //output: single value representing the number of times y is divisible by x+the calculated decimal therein
