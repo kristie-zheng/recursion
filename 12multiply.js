@@ -1,17 +1,19 @@
 // 12. Write a function that multiplies two numbers without using the * operator or
 // Math methods.
-var total = 0;
+
 var multiply = function(x, y) {
-    if (y < 1) {
-        return total + (x*y);
+    if (y === 1) {
+        return x;
+    }
+    else if (y<1) {
+        return x*y;
     }
     else {
-        total += x;
-        return multiply(x, y-1);
+        return x + multiply(x, y-1);
     }
 };
 
-console.log(multiply(75.5, 2.5));
+console.log(multiply(103.26, 20.5));
 
 //input: two numbers (ints and flaots)
 //output: one value representing x multiplied by y
