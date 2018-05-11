@@ -8,13 +8,14 @@
 //if number is 2 return true
 //if number is less than 2, return false
 var isEven = function(n) {
-    if (n === 2) {
+    console.log(n);
+    if (n === 1) {
       return true;
     }
-    else if (n < 2) {
+    else if (n < 1) {
       return false;
     }
-   return isEven(n-2);
+   return isEven(n/2);
 };
 
 

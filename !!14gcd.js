@@ -29,7 +29,7 @@ var findFactors = function(array, number) {
   }
 }
 
-console.log(findFactors([], 24))
+console.log(findFactors([], 25))
 //input: two positive integers
 //output single positive integer representing the GCF
 //constraints: none
