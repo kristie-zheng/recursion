@@ -25,7 +25,7 @@ var countKeysInObj = function(obj, key) {
 
 
 var obj = {'e':{'x':'y'},'t':{'r':{'e':'r'},'p':{'y':'r'}},'y':'e'};
-console.log(countKeysInObj(obj, 'r'));
+console.log(countKeysInObj(obj, 'e'));
 //input: an object and a target key
 //output: an integer representing how many times the key is found in the object
 //edge cases: if key never occurs in the object, return zero
