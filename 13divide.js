@@ -8,13 +8,14 @@ var divide = function(x, y) {
     }
     else if (x < y) {
         //here is the case where a remainder exists
+        return numberOfDivisions-1 + (x/y);
     }
     else {
         return numberOfDivisions + divide(x-y, y);
     }
 };
 
-console.log(divide(65, 4));
+console.log(divide(25, 4));
 
 //input: two numbers (floats or integers)
 //output: single value representing the number of times y is divisible by x+the calculated decimal therein
